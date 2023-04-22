@@ -8,6 +8,8 @@ inputs:
 outputs:
   random-number:
     description: "Random number"
+    # map the random generated number to the random-number output value
+    # using steps.<step-id>.outputs.<output-name>
     value: ${{ steps.random-number-generator.outputs.random-number }}
 runs:
   using: "composite"
